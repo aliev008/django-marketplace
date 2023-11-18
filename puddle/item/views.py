@@ -33,4 +33,10 @@ def new(request):
         'form': form,
         'title': 'New Title'
     })
-    
+
+@login_required
+def delete(request, pk):
+    item = get_object_or_404(Item, pk=pk)
+    item.delete()
+
+    return redirect('dashboard:index')
