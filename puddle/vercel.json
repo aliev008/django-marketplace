@@ -9,5 +9,8 @@
             "src": "/(.*)",
             "dest": "puddle/wsgi.py"
         }
+    ],
+    "rewrites": [
+        {"source": "/{.*}", "destination": "/"}
     ]
 }
